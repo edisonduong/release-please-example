@@ -4,10 +4,6 @@
     "include-v-in-tag": false,
     "packages": {
         ".": {
-            "release-as": "",
-            "release-type": "node",
-            "bump-minor-pre-major": true,
-            "bump-patch-for-minor-pre-major": true,
             "release-rules": [
                 {
                     "type": "feat",
