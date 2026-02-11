@@ -1,4 +1,43 @@
 {
+    "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
     "release-type": "node",
-    "include-v-in-tag": false
+    "include-v-in-tag": false,
+    "packages": {
+        ".": {
+            "release-rules": [
+                {
+                    "type": "feat",
+                    "release": "minor"
+                },
+                {
+                    "type": "fix",
+                    "release": "patch"
+                },
+                {
+                    "type": "infra",
+                    "release": "patch"
+                },
+                {
+                    "type": "refactor",
+                    "release": "patch"
+                },
+                {
+                    "type": "perf",
+                    "release": "patch"
+                },
+                {
+                    "type": "docs",
+                    "release": "patch"
+                },
+                {
+                    "type": "test",
+                    "release": "patch"
+                },
+                {
+                    "type": "chore",
+                    "release": false
+                }
+            ]
+        }
+    }
 }
