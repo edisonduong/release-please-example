@@ -1,41 +1,53 @@
 {
     "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
-    "release-type": "node",
-    "include-v-in-tag": false,
+    "include-v-in-tag": true,
+    "separate-pull-requests": false,
     "packages": {
         ".": {
-            "release-rules": [
+            "release-type": "node",
+            "changelog-path": "CHANGELOG.md",
+            "draft-pull-request": false,
+            "prerelease": false,
+            "changelog-sections": [
                 {
                     "type": "feat",
-                    "release": "minor"
+                    "section": "Features"
                 },
                 {
                     "type": "fix",
-                    "release": "patch"
-                },
-                {
-                    "type": "infra",
-                    "release": "patch"
-                },
-                {
-                    "type": "refactor",
-                    "release": "patch"
+                    "section": "Fixes"
                 },
                 {
                     "type": "perf",
-                    "release": "patch"
+                    "section": "Performance"
+                },
+                {
+                    "type": "revert",
+                    "section": "Reverts"
                 },
                 {
                     "type": "docs",
-                    "release": "patch"
-                },
-                {
-                    "type": "test",
-                    "release": "patch"
+                    "section": "Documentation"
                 },
                 {
                     "type": "chore",
-                    "release": false
+                    "section": "Chores"
+                },
+                {
+                    "type": "refactor",
+                    "section": "Refactors"
+                },
+                {
+                    "type": "test",
+                    "section": "Tests"
+                },
+                {
+                    "type": "ci",
+                    "section": "CI"
+                },
+                {
+                    "type": "build",
+                    "section": "Build"
                 }
             ]
         }
